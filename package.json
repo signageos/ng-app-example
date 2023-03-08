@@ -1,11 +1,16 @@
 {
   "name": "ng-app",
   "version": "0.0.0",
+  "main": "dist/ng-app/index.html",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "watch-applet": "npx chokidar-cli ./dist/**/* -c 'node ./applet-connect-publish.js'",
     "test": "ng test"
   },
   "private": true,
@@ -26,6 +31,7 @@
     "@angular-devkit/build-angular": "^15.2.1",
     "@angular/cli": "~15.2.1",
     "@angular/compiler-cli": "^15.2.0",
+    "@signageos/webpack-plugin": "0.3.2-mz-fix-device-connect.129",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
