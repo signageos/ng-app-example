@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* signageOS applets does not support empty files at the moment so at least something is required */
+body {
+    /* signageOS applets has a blue background by default */
+    background-color: white;
+}
